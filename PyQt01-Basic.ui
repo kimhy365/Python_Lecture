@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyWindow</class>
+ <widget class="QMainWindow" name="MyWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>153</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>윈도우 만들기</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>win_icon.png</normaloff>win_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>50</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="toolTip">
+     <string>이버턴을 누르면 메시지창이 나타납니다.</string>
+    </property>
+    <property name="statusTip">
+     <string>버턴</string>
+    </property>
+    <property name="text">
+     <string>메시지</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mnFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actNew"/>
+    <addaction name="actOpen"/>
+    <addaction name="actSave"/>
+    <addaction name="separator"/>
+    <addaction name="actExit"/>
+   </widget>
+   <widget class="QMenu" name="mnHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+   </widget>
+   <addaction name="mnFile"/>
+   <addaction name="mnHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="statusTip">
+    <string>상태바</string>
+   </property>
+  </widget>
+  <action name="actNew">
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actOpen">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>win_icon.png</normaloff>win_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MyWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
